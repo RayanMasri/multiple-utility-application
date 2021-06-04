@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./app1/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <a style="opacity: 0" id="download-link"></a>
+
+        <div id="app">
+            <div id="drop-area">
+                <div id="drop-area-indicator">
+                    <p>Drop images (.png) (.jpg) here to upload</p>
+                </div>
+                <div id="drop-overlay">
+                    <svg width="64" height="64">
+                        <image
+                            href="upload.svg"
+                            height="64"
+                            width="64"
+                            x="50%"
+                            y="50%"
+                            transform="translate(-32, -32)"
+                            opacity="0.4"
+                        />
+                    </svg>
+                </div>
+                <input
+                    type="file"
+                    id="drop"
+                    name="image"
+                    accept="image/png, image/jpeg"
+                />
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="main-canvas-container">
+                <canvas id="canvas" width="0" height="0"></canvas>
+            </div>
+            <div id="tool-bar">
+                <div class="tool-bar-grid">
+                    <div class="input-field">
+                        <p>W</p>
+                        <input type="text" alt="W" />
+                    </div>
+                    <div class="input-field">
+                        <p>H</p>
+                        <input type="text" alt="H" />
+                    </div>
+                </div>
+
+                <div class="tool-bar-crop">Resize</div>
+            </div>
+        </div>
+
+        <script src="./app1/canvas.js"></script>
+        <script src="./app1/script.js"></script>
+        <script src="./app1/resize.js"></script>
+        <script src="./app1/drop.js"></script>
+    </body>
+</html>
