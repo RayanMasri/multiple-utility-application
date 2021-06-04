@@ -7,7 +7,7 @@ const save = () => {
     a.click();
     a.remove();
 
-    window.location.replace(window.location.origin);
+    window.location.href = window.location.origin;
 };
 
 document.querySelector('.tool-bar-crop').addEventListener('click', () => {
