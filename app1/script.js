@@ -100,8 +100,8 @@ const onFileDrop = (file) => {
                     width: this.width,
                 };
 
-                fields[0].value = this.height;
-                fields[1].value = this.width;
+                fields[0].value = this.width;
+                fields[1].value = this.height;
                 updateCrop();
             };
             img.src = result;
